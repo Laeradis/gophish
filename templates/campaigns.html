@@ -83,9 +83,17 @@
               <input type="text" class="form-control" placeholder="http://192.168.1.1" id="url"/>
 	      <label class="control-label" for="url">Schedule: </label>
               <input type="text" class="form-control" id="launch_date"/>
-	      <label class="control-label" for="profile">Sending Profile:</label>
+	      
+        <div class="checkbox checkbox-primary">
+            <input id="is_proxy" type="checkbox" value="1">
+            <label for="is_proxy">Should Use Proxy Injection <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="If this option is selected then a forward and reverse proxy will be used instead of a cloned site landing page and the proxy will inject custom content, based on the defined rewrite rules, in the original destination web page"></i>
+            </label>
+        </div>
+
+        <label class="control-label" for="profile">Sending Profile:</label>
 	      <div class="input-group">
 		<input type="text" class="typeahead form-control" placeholder="Sending Profile" id="profile"/>
+
 		<span class="input-group-btn">
 		    <button type="button" data-toggle="modal" data-target="#sendTestEmailModal" class="btn btn-primary typeahead-button"><i class="fa fa-envelope"></i> Send Test Email</button>
 		</span>

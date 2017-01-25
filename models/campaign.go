@@ -20,6 +20,7 @@ type Campaign struct {
 	PageId        int64     `json:"-"`
 	Page          Page      `json:"page"`
 	Status        string    `json:"status"`
+	IsProxy       string     `json:"is_proxy"`
 	Results       []Result  `json:"results,omitempty"`
 	Groups        []Group   `json:"groups,omitempty"`
 	Events        []Event   `json:"timeline,omitemtpy"`

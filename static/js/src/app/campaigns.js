@@ -27,6 +27,10 @@ function launch() {
         preConfirm: function() {
             return new Promise(function(resolve, reject) {
                 groups = []
+                proxyFlag = $("#is_proxy").val()
+                if (proxyFlag != "1") {
+                    proxyFlag = "0"
+                }
                 $.each($("#groupTable").DataTable().rows().data(), function(i, group) {
                     groups.push({
                         name: unescapeHtml(group[0])
@@ -38,6 +42,7 @@ function launch() {
                             name: $("#template").val()
                         },
                         url: $("#url").val(),
+                        is_proxy: proxyFlag,
                         page: {
                             name: $("#page").val()
                         },
